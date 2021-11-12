@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Extra Apps Added/Installed
-
     'rest_framework', 
     'rest_framework.authtoken', 
     'dj_rest_auth', 
@@ -49,6 +48,7 @@ INSTALLED_APPS = [
 
     'allauth.socialaccount', 
     'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.github', 
 
     # Local Apps
     'accounts', 
@@ -150,3 +150,5 @@ REST_FRAMEWORK = {
 REST_USE_JWT = True
 JWT_AUTH_COOKIE = 'access-token'
 JWT_AUTH_REFRESH_COOKIE = 'refresh-token'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
